@@ -85,7 +85,7 @@ export const CadScreen = ({ navigation }) => {
     <View style={styles.container}>
         <View style={styles.cad}>
             <Image
-              source={{ uri: require("/root/LogCadApp/assets/logodocks.png") }} 
+              source={{ uri: require("/assets/images/logodocks.png") }} 
               style={styles.imagedocks}
             />
             <Paragraph style={styles.paragraphbv}>Bem vindo(a) ao</Paragraph> <Paragraph style={styles.paragraphbv1}>Docks</Paragraph>
@@ -155,15 +155,16 @@ export const CadScreen = ({ navigation }) => {
      
       <Button style={styles.buttoncadface}>
         <Image style={styles.imageface}
-        source={{ uri: require("/root/LogCadApp/assets/facedocks.png") }}/>
+        source={{ uri: require("/assets/images/facedocks.png") }}/>
        <Text style={styles.textcadface}> Cadastre-se com o Facebook </Text>
       </Button>
     
       <View>
       <Button style={styles.buttoncadgoogle} mode="contained">
       <Image style={styles.imagegoogle}
-        source={{ uri: require("/root/LogCadApp/assets/googledocks.png") }}/>
+        source={{ uri: require("/assets/images/googledocks.png") }}/>
         <Text style={styles.textcadface}>Cadastre-se com o Google </Text>
+      
       </Button>
       </View>
       <View style={styles.esqueceuSenha}>

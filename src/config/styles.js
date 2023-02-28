@@ -50,6 +50,7 @@ export const styles = StyleSheet.create({
     borderRadius: "10px",
     width: "140px",
     margin: "auto",
+    marginBottom: "15px",
   },
 
   esqueceuSenha: {
@@ -81,28 +82,29 @@ export const styles = StyleSheet.create({
     borderRadius: "5px",
     border: '5px solid #EDEDED',
     height: "60px",
-    width: "300px",
+    width: "250px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     margin: "auto",
+    marginBottom: "20px",
 
 
   },
   textcadface: {
     color: "black",
     fontFamily: "Open Sans",
-    margin: "auto",
+    marginTop: "1px",
     fontSize: "15px",
 
   },
- 
+
   buttoncadgoogle: {
     backgroundColor: "transparent",
     borderRadius: "5px",
     border: '5px solid #EDEDED',
     height: "60px",
-    width: "300px",
+    width: "250px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -123,12 +125,49 @@ export const styles = StyleSheet.create({
   label: {
     color: "black",
   },
-  logindocks:{
-     margin:"auto",
+  logindocks: {
+    margin: "auto",
   },
 
   link: {
     fontWeight: "bold",
     color: "black",
   },
+  imagetextgoogle: {
+    display: "flex",
+  },
+  ////Login
+  containerlogin1: {
+    backgroundColor: "white",
+    paddingRight: '40px',
+    paddingLeft: '40px',
+    paddingTop: '40px',
+    paddingBottom: '100px',
+    borderRadius: '35px',
+  },
+  containerlogin: {
+    alignItems: "center",
+    marginBottom: 24,
+    paddingHorizontal: 26,
+    flex: 1,
+    backgroundColor: "#FFF2D8",
+    justifyContent: "center",
+    fontFamily: "Open Sans",
+  },
+  buttoncontinuar1:{ 
+       marginTop:"10px",
+  },
+  buttoncadgoogle1: {
+    backgroundColor: "transparent",
+    borderRadius: "5px",
+    border: '5px solid #EDEDED',
+    height: "60px",
+    width: "250px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    margin: "auto",
+    marginTop:"5px",
+  },
 });
+
