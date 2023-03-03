@@ -162,7 +162,7 @@ export const CadScreen = ({ navigation }) => {
       <View>
       <Button style={styles.buttoncadgoogle} mode="contained">
       <Image style={styles.imagegoogle}
-        source={{ uri: require("/assets/images/googledocks.png") }}/>
+        source={{ uri: require("/assets/images/googledocks(2).png") }}/>
         <Text style={styles.textcadface}>Cadastre-se com o Google </Text>
       
       </Button>

@@ -71,6 +71,7 @@ export const styles = StyleSheet.create({
     border: '5px solid',
     borderColor: "#EDEDED",
     underline: "none",
+    fontSize:"10px",
     borderTopRightRadius: "10px",
     borderTopLeftRadius: "10px",
     borderBottomLeftRadius: "10px",
@@ -94,8 +95,9 @@ export const styles = StyleSheet.create({
   textcadface: {
     color: "black",
     fontFamily: "Open Sans",
-    marginTop: "1px",
-    fontSize: "15px",
+    margin:"auto",
+    fontSize: "12px",
+    marginLeft:"2px",
 
   },
 
@@ -120,7 +122,7 @@ export const styles = StyleSheet.create({
     width: "40px",
     height: "40px",
     marginLeft: "0px",
-    marginBottom: "1px",
+    marginBottom: "0px",
   },
   label: {
     color: "black",
@@ -169,5 +171,26 @@ export const styles = StyleSheet.create({
     margin: "auto",
     marginTop:"5px",
   },
+  buttoncadface1: {
+    backgroundColor: "transparent",
+    borderRadius: "5px",
+    border: '5px solid #EDEDED',
+    height: "60px",
+    width: "250px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    margin: "auto",
+    marginBottom:"5px",
+    marginTop:"5px",
+  },
+  imagetextgoogle:{
+    display:"flex", 
+    flexDirection: "row",
+  },
+  imagetextface:{
+    display:"flex", 
+    flexDirection: "row",
+  }
 });
 

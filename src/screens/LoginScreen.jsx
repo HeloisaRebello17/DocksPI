@@ -67,7 +67,7 @@ export const LoginScreen = ({ route, navigation }) => {
                 {mensagem && <HelperText type="info">{mensagem}</HelperText>}
                 <HelperText type="error">{mostraErro}</HelperText>
                 <TextInput
-                    label="Digite seu E-mail"
+                    label="Digite seu E-mail" 
                     value={email.value}
                     onChangeText={(text) => setEmail({ value: text, error: "" })}
                     error={!!email.error}
@@ -95,17 +95,20 @@ export const LoginScreen = ({ route, navigation }) => {
                 </Button>
 
                 <Button style={styles.buttoncadface1}>
+                    <View style={styles.imagetextface}>
                     <Image style={styles.imageface}
                         source={{ uri: require("/assets/images/facedocks.png") }} />
-                    <Text style={styles.textcadface}> Cadastre-se com o Facebook </Text>
+                    <Text style={styles.textcadface}>Cadastre-se com o Facebook </Text>
+                    </View>
                 </Button>
 
                 <View>
                     <Button style={styles.buttoncadgoogle} mode="contained">
+                        <View style={styles.imagetextgoogle}>
                         <Image style={styles.imagegoogle}
-                            source={{ uri: require("/assets/images/googledocks.png") }} />
+                            source={{ uri: require("/assets/images/logogoogle.png") }} />
                         <Text style={styles.textcadface}>Cadastre-se com o Google </Text>
-
+                    </View>
                     </Button>
                 </View>
                 <View style={styles.row}>
