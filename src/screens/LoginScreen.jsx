@@ -15,45 +15,31 @@ import { styles } from "../config/styles";
 
 export const LoginScreen = ({ route, navigation }) => {
     const [email, setEmail] = useState({
-        value: "",
-        error: "",
+      value: "",
+      error: "",
     });
     const [password, setPassword] = useState({
-        value: "",
-        error: "",
+      value: "",
+      error: "",
     });
     const [mostraErro, setMostraErro] = useState("");
     const { mensagem } = route.params || false;
-
+  
     function onLoginPressed() {
-        console.log("LoginIniciado");
-        if (email.value === "" || password.value === "") {
-            setEmail({ ...email, error: "Entre com um e-mail válido" });
-            setPassword({ ...password, error: "Entre com uma senha" });
-            return;
-        }
-        signInWithEmailAndPassword(auth, email.value, password.value)
-            .then((userCredential) => {
-                navigation.navigate("HomeNavigation");
-            })
-            .catch((error) => {
-                lidarComErro(error.code);
-            });
-    }
-    function lidarComErro(erro) {
-        if (erro == "auth/wrong-password") {
-            setMostraErro("Senha errada");
-            return;
-        }
-        if (erro == "auth/user-not-found") {
-            setMostraErro("Usuário não encontrado");
-            return;
-        }
-        if (erro == "auth/invalid-email") {
-            setMostraErro("E-mail inválido");
-            return;
-        }
-        setMostraErro(erro);
+      console.log("LoginIniciado");
+      if (email.value === "" || password.value === "") {
+        setEmail({ ...email, error: "Entre com um e-mail válido" });
+        setPassword({ ...password, error: "Entre com uma senha" });
+        return;
+      }
+      signInWithEmailAndPassword(auth, email.value, password.value)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          navigation.navigate("HomeNavigation");
+        })
+        .catch((error) => {
+          lidarComErro(error.code);
+        });
     }
     return (
         <View style={styles.containerlogin}>
