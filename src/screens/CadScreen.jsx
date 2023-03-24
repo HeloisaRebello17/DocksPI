@@ -176,6 +176,21 @@ export const CadScreen = ({ navigation }) => {
           <Text style={styles.logindocks}>Já membro? Entrar</Text>
         </TouchableOpacity>
       </View>
+      <View style={styles.esqueceuSenha}>
+       
+        <TouchableOpacity onPress={() => navigation.navigate("CKeditor")}>
+          <Text style={styles.logindocks}>Criação de Personagens</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("CriacaoMundos")}>
+          <Text style={styles.logindocks}>Criação de Mundos</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("SnowflakeCK")}>
+          <Text style={styles.logindocks}>Snowflake</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("ModalScreen")}>
+          <Text style={styles.logindocks}>Modal</Text>
+        </TouchableOpacity>
+      </View>
       </View>
     </View>
   );

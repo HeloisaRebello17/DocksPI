@@ -191,6 +191,103 @@ export const styles = StyleSheet.create({
   imagetextface:{
     display:"flex", 
     flexDirection: "row",
-  }
+  },
+  //CKeditor
+  navConfig: {
+    backgroundColor: "#D5ECB4",
+  },
+  containercriacaoper: {
+    backgroundColor: "#FFF2D8",
+  },
+  linha: {
+    height: 10, width: '100%',
+  },
+  paragraphper: {
+    fontWeight: "bolder",
+    marginRight: "10px",
+    marginLeft:"10px",
+    display:"flex",
+  },
+  containernomeper:{
+     marginTop:"15px",
+     marginBottom:"10px",
+     display:"flex",
+  },
+  inputper: {
+    backgroundColor: "white",
+    width: "90px",
+    height: "20px",
+    marginLeft: "10px",
+    borderRadius: "0px",
+  },
+  buttonper: {
+    backgroundColor: "#E9DAF7",
+    height: "35px",
+    width: "67px",
+    borderRadius: "0px",
+    border: "1px solid #D9D9D9",
+    color: "black",
+    justifyContent: "center",
+    
+  },
+ containersalvarper:{
+   display:"flex",
+   flexDirection: "row",
+    justifyContent: "flex-end",
+    marginTop:"20px",
+ },
+ linhafinal:{
+  height: "7",
+   width: "100%",
+ }, 
+ iconinfo:{
+  fontSize:"24px",
+  marginLeft:"auto",
+ },
+ //Modal
+ centeredView: {
+  flex: 1,
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginTop: 22,
+},
+modalView: {
+  margin: 20,
+  backgroundColor: 'white',
+  borderRadius: 20,
+  padding: 35,
+  alignItems: 'center',
+  shadowColor: '#000',
+  shadowOffset: {
+    width: 0,
+    height: 2,
+  },
+  shadowOpacity: 0.25,
+  shadowRadius: 4,
+  elevation: 5,
+},
+button: {
+  borderRadius: 20,
+  padding: 10,
+  elevation: 2,
+},
+buttonOpen: {
+  backgroundColor: '#F194FF',
+},
+buttonClose: {
+  backgroundColor: '#2196F3',
+},
+textStyle: {
+  color: 'white',
+  fontWeight: 'bold',
+  textAlign: 'center',
+},
+modalText: {
+  marginBottom: 15,
+  textAlign: 'center',
+},
 });
+
+
+
 

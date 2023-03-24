@@ -1,9 +1,13 @@
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import { CadScreen } from "../screens/CadScreen";
+import CKeditor from "../screens/Ckeditor";
+import CriacaoMundos from "../screens/CriacaoMundosScreen";
 import { ForgotPasswordScreen } from "../screens/ForgotPasswordScreen";
 import HomeScreen from "../screens/HomeScreen";
 import { LoginScreen } from "../screens/LoginScreen";
+import ModalScreen from "../screens/ModalScreen";
+import SnowflakeCK from "../screens/SnowflakeCKScreen";
 
 const Stack = createStackNavigator()
 
@@ -19,6 +23,41 @@ export const RootNavigation = () => {
                     title: "Tela de Login",
                 }}
             />
+           <Stack.Screen
+                name="CKeditor"
+                component={CKeditor}
+                options={{
+                    headerShown: false,
+                    title: "Tela de Personagens",
+                }}
+            />
+              <Stack.Screen
+                name="CriacaoMundos"
+                component={CriacaoMundos}
+                options={{
+                    headerShown: false,
+                    title: "Tela de Mundos",
+                }}
+            />
+              <Stack.Screen
+                name="SnowflakeCK"
+                component={SnowflakeCK}
+                options={{
+                    headerShown: false,
+                    title: "Tela de Snowflake",
+                }}
+            />
+             
+              <Stack.Screen
+                name="ModalScreen"
+                component={ModalScreen}
+                options={{
+                    headerShown: false,
+                    title: "Tela de Snowflake",
+                }}
+            />
+             
+         
            
             <Stack.Screen
                 name="ForgotPasswordScreen"
@@ -26,6 +65,14 @@ export const RootNavigation = () => {
                 options={{
                     headerShown: false,
                     title: "Tela de Login",
+                }}
+            />
+              <Stack.Screen
+                name="HomeNavigation"
+                component={TabNavigation}
+                options={{
+                    headerShown: false,
+                    title: "Tela do Aplicativo",
                 }}
             />
             <Stack.Screen
@@ -36,14 +83,8 @@ export const RootNavigation = () => {
                     title: "Tela de Cadastro",
                 }}
             />
-            <Stack.Screen
-                name="HomeNavigation"
-                component={TabNavigation}
-                options={{
-                    headerShown: false,
-                    title: "Tela do Aplicativo",
-                }}
-            />
+            
+            
         </Stack.Navigator>
     );
 };
@@ -58,8 +99,8 @@ export const TabNavigation = () => {
                     tabBarLabel: "Home",
                 }}
             />
-            <Tab.Screen name="Home2" component={HomeScreen} />
-            <Tab.Screen name="Home3" component={HomeScreen} />
+            <Tab.Screen name="Home2" component={CadScreen} />
+            <Tab.Screen name="Home3" component={CKeditor} />
         </Tab.Navigator>
     );
 };
