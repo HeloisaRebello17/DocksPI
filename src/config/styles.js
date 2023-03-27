@@ -245,7 +245,7 @@ export const styles = StyleSheet.create({
   marginLeft:"auto",
  },
  //Modal
- centeredView: {
+ enteredView: {
   flex: 1,
   justifyContent: 'center',
   alignItems: 'center',
@@ -255,36 +255,59 @@ modalView: {
   margin: 20,
   backgroundColor: 'white',
   borderRadius: 20,
-  padding: 35,
+  padding: 15,
   alignItems: 'center',
   shadowColor: '#000',
   shadowOffset: {
-    width: 0,
-    height: 2,
+      width: 0,
+      height: 2,
   },
   shadowOpacity: 0.25,
   shadowRadius: 4,
   elevation: 5,
 },
-button: {
-  borderRadius: 20,
-  padding: 10,
-  elevation: 2,
+buttonclose:{
+  fontSize:"24px",
+  marginLeft:"auto",
 },
-buttonOpen: {
-  backgroundColor: '#F194FF',
-},
-buttonClose: {
-  backgroundColor: '#2196F3',
-},
+
 textStyle: {
-  color: 'white',
+  color: 'black',
   fontWeight: 'bold',
   textAlign: 'center',
 },
 modalText: {
-  marginBottom: 15,
-  textAlign: 'center',
+
+  textAlign: 'start',
+},
+modalText2: {
+  marginRight: "auto",
+},
+modalText3: {
+  marginTop: "10px",
+  marginBottom: "10px",
+  fontWeight: "bold"
+},
+modalText4: {
+  marginRight: "auto",
+  marginBottom: "10px",
+  marginTop: "10px",
+},
+modalText5: {
+  marginBottom: "10px",
+  fontWeight: "bold",
+},
+modalText6: {
+  fontWeight: "bold",
+},
+iconinfo: {
+  fontSize: "24px",
+  marginLeft:"auto",
+  marginTop:"15px",
+},
+ containermodal:{
+ display:"flex",
+ flexDirection:"row",
 },
 });
 
