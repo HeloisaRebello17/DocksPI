@@ -150,7 +150,7 @@ export const CadScreen = ({ navigation }) => {
       </HelperText>
      
       <Button style={styles.buttoncontinuar} mode="contained" onPress={onRegisterPressed} >
-        Continuar
+       <Text style={{color:"black"}}> Continuar</Text>
       </Button>
      
       <Button style={styles.buttoncadface}>
@@ -187,8 +187,8 @@ export const CadScreen = ({ navigation }) => {
         <TouchableOpacity onPress={() => navigation.navigate("SnowflakeCK")}>
           <Text style={styles.logindocks}>Snowflake</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("ModalScreen")}>
-          <Text style={styles.logindocks}>Modal</Text>
+        <TouchableOpacity onPress={() => navigation.navigate("CapitulosCKScreen")}>
+          <Text style={styles.logindocks}>Capítulos</Text>
         </TouchableOpacity>
       </View>
       </View>

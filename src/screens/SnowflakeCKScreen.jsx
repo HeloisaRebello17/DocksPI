@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { styles } from "../config/styles";
+import { colors, locations, styles } from "../config/styles";
 import { Appbar, Button, Paragraph, TextInput } from "react-native-paper";
 import { Alert, Modal, Text, View } from 'react-native';
 import { LinearGradient } from "expo-linear-gradient";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import { TouchableOpacity } from "react-native-web";
 
 
 
@@ -31,39 +32,14 @@ export default function SnowflakeCK() {
       </Appbar.Header>
 
       <View>
-        <LinearGradient
-          // Background Linear Gradient
-          start={{ x: 0, y: 0 }}
-          end={{ x: 1, y: 0 }}
-          colors={[
-            "rgba(190,228,228,1)",
-            "rgba(190,228,228,1)",
-            "rgba(242,204,201,1)",
-            "rgba(242,204,201,1)",
-            "rgba(235,222,240,1)",
-            "rgba(235,222,240,1)",
-            "rgba(239,196,167,1)",
-            "rgba(239,196,167,1)",
-            "rgba(239,196,167,1)",
-            "rgba(190,228,228,1)",
-            "rgba(190,228,228,1)",
-            "rgba(242,204,201,1)",
-            "rgba(242,204,201,1)",
-            "rgba(235,222,240,1)",
-            "rgba(235,222,240,1)",
-            "rgba(239,196,167,1)",
-            "rgba(239,196,167,1)",
-            "rgba(190,228,228,1)",
-            "rgba(190,228,228,1)",
-            "rgba(242,204,201,1)",
-            "rgba(242,204,201,1)",
-          ]}
-          locations={[
-            0, 0.1, 0.1, 0.2, 0.2, 0.3, 0.3, 0.3, 0.4, 0.4, 0.5, 0.5, 0.6, 0.6,
-            0.7, 0.7, 0.8, 0.8, 0.9, 0.9, 1, 1,
-          ]}
-          style={{ height: 7, width: "100%" }}
-        />
+      <LinearGradient
+        // Background Linear Gradient 
+          start={{ x: 0, y: 0 }} 
+          end={{ x: 1, y: 0 }} 
+          colors={colors} 
+          locations={locations} 
+        style={{height: 7, width: "100%",  }}
+      />
  <View>
       </View>
       <View style={styles.containermodal}>
@@ -126,52 +102,40 @@ export default function SnowflakeCK() {
         </View>
          </View>
         </View>
+        <View
+      style={{
+       height: 7,
+       backgroundColor: '#F4CCC8',
+       marginBottom: 10 //opcional
+      }}
+      />
 
       <div style={{ maxWidth: "300px", margin: "0 auto", }}>
         <CKEditor
           editor={ClassicEditor}
           onChange={(e, editor) => { handleChange(e, editor) }} />
         <View style={styles.containersalvarper}>
-          <Button style={styles.buttonper} mode="contained" onPress={() => navigation.navigate("LoginScreen")}>
+          <Button style={{backgroundColor:"#F4CCC8", border:"3px solid #D9D9D9", borderRadius:"1px", height:"40px", width:"70px", fontSize:"13px", display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",}}  mode="contained"onPress={() => navigation.navigate("LoginScreen")}>
             Salvar
           </Button>
         </View>
-        <div style={{ display: "flex", justifyContent: "end" }}>
-          <LinearGradient
-            // Background Linear Gradient
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 0 }}
-            colors={[
-              "rgba(190,228,228,1)",
-              "rgba(190,228,228,1)",
-              "rgba(242,204,201,1)",
-              "rgba(242,204,201,1)",
-              "rgba(235,222,240,1)",
-              "rgba(235,222,240,1)",
-              "rgba(239,196,167,1)",
-              "rgba(239,196,167,1)",
-              "rgba(239,196,167,1)",
-              "rgba(190,228,228,1)",
-              "rgba(190,228,228,1)",
-              "rgba(242,204,201,1)",
-              "rgba(242,204,201,1)",
-              "rgba(235,222,240,1)",
-              "rgba(235,222,240,1)",
-              "rgba(239,196,167,1)",
-              "rgba(239,196,167,1)",
-              "rgba(190,228,228,1)",
-              "rgba(190,228,228,1)",
-              "rgba(242,204,201,1)",
-              "rgba(242,204,201,1)",
-            ]}
-            locations={[
-              0, 0.1, 0.1, 0.2, 0.2, 0.3, 0.3, 0.3, 0.4, 0.4, 0.5, 0.5, 0.6, 0.6,
-              0.7, 0.7, 0.8, 0.8, 0.9, 0.9, 1, 1,
-            ]}
-            style={styles.linhafinal}
-          />
-        </div>
+        <TouchableOpacity onPress={() => navigation.navigate("CapitulosScreen")}>
+          <Text style={styles.logindocks}>Capítulos</Text>
+        </TouchableOpacity>
       </div>
+      <View>
+      <LinearGradient
+        // Background Linear Gradient 
+          start={{ x: 0, y: 0 }} 
+          end={{ x: 1, y: 0 }} 
+          colors={colors} 
+          locations={locations} 
+        style={{height: 7, width: "100%", marginTop:"448px", }}
+      />
+      </View>
 
     </SafeAreaProvider>
   );

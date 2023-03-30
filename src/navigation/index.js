@@ -1,12 +1,13 @@
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import { CadScreen } from "../screens/CadScreen";
+import CapitulosCKScreen from "../screens/CapitulosCKScreen";
+import Capitulos from "../screens/CapitulosScreen";
 import CKeditor from "../screens/Ckeditor";
 import CriacaoMundos from "../screens/CriacaoMundosScreen";
 import { ForgotPasswordScreen } from "../screens/ForgotPasswordScreen";
 import HomeScreen from "../screens/HomeScreen";
 import { LoginScreen } from "../screens/LoginScreen";
-import ModalScreen from "../screens/ModalScreen";
 import SnowflakeCK from "../screens/SnowflakeCKScreen";
 
 const Stack = createStackNavigator()
@@ -49,11 +50,19 @@ export const RootNavigation = () => {
             />
              
               <Stack.Screen
-                name="ModalScreen"
-                component={ModalScreen}
+                name="CapitulosCKScreen"
+                component={CapitulosCKScreen}
                 options={{
                     headerShown: false,
-                    title: "Tela de Snowflake",
+                    title: "Tela de Capítulos",
+                }}
+            />
+              <Stack.Screen
+                name="Capitulos"
+                component={Capitulos}
+                options={{
+                    headerShown: false,
+                    title: "Tela de Capítulos",
                 }}
             />
              

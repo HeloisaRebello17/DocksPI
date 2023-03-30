@@ -1,4 +1,5 @@
 
+import { LinearGradient } from "expo-linear-gradient";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { TouchableOpacity, Text, View, Image } from "react-native";
@@ -11,7 +12,7 @@ import {
     TextInput,
 } from "react-native-paper";
 import { auth } from "../config/firebase";
-import { styles } from "../config/styles";
+import { colors, locations, styles } from "../config/styles";
 
 export const LoginScreen = ({ route, navigation }) => {
     const [email, setEmail] = useState({
@@ -42,7 +43,18 @@ export const LoginScreen = ({ route, navigation }) => {
         });
     }
     return (
+        
         <View style={styles.containerlogin}>
+             <View>
+      <LinearGradient
+        // Background Linear Gradient 
+          start={{ x: 0, y: 0 }} 
+          end={{ x: 1, y: 0 }} 
+          colors={colors} 
+          locations={locations} 
+          style={{ height: 7, width: "100%" }} 
+          />
+      </View>
             <View style={styles.containerlogin1}>
                 <Image
                     source={{ uri: require("/assets/images/logodocks.png") }}
@@ -53,7 +65,7 @@ export const LoginScreen = ({ route, navigation }) => {
                 {mensagem && <HelperText type="info">{mensagem}</HelperText>}
                 <HelperText type="error">{mostraErro}</HelperText>
                 <TextInput
-                    label="Digite seu E-mail" 
+                    label="E-mail" 
                     value={email.value}
                     onChangeText={(text) => setEmail({ value: text, error: "" })}
                     error={!!email.error}
@@ -77,9 +89,9 @@ export const LoginScreen = ({ route, navigation }) => {
                     style={styles.input}
                 />
                 <Button style={styles.buttoncontinuar1} mode="contained" onPress={onLoginPressed} >
-                    Continuar
+                    <Text style={{color:"black"}}>Continuar</Text>
                 </Button>
-
+                <Text style={{margin:"auto"}}>OU</Text>
                 <Button style={styles.buttoncadface1}>
                     <View style={styles.imagetextface}>
                     <Image style={styles.imageface}
@@ -104,6 +116,17 @@ export const LoginScreen = ({ route, navigation }) => {
                     </TouchableOpacity>
                 </View>
             </View>
+            <View>
+      <LinearGradient
+        // Background Linear Gradient 
+          start={{ x: 0, y: 0 }} 
+          end={{ x: 1, y: 0 }} 
+          colors={colors} 
+          locations={locations} 
+          style={{ height: 7, width: "100%", marginTop:"348px" }} 
+          />
+      </View>
         </View>
+       
     );
 };

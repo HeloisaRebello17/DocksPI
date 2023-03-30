@@ -5,7 +5,7 @@ import { shouldUseActivityState } from "react-native-screens";
 export const styles = StyleSheet.create({
   container: {
     alignItems: "center",
-    marginBottom: 24,
+    width:"380px",
     paddingHorizontal: 26,
     flex: 1,
     backgroundColor: "#FFF2D8",
@@ -18,8 +18,8 @@ export const styles = StyleSheet.create({
     paddingRight: '40px',
     paddingLeft: '40px',
     paddingTop: '40px',
-    paddingBottom: '100px',
     borderRadius: '35px',
+    
   },
   imagedocks: {
     width: '80px',
@@ -71,7 +71,7 @@ export const styles = StyleSheet.create({
     border: '5px solid',
     borderColor: "#EDEDED",
     underline: "none",
-    fontSize:"10px",
+    fontSize: "10px",
     borderTopRightRadius: "10px",
     borderTopLeftRadius: "10px",
     borderBottomLeftRadius: "10px",
@@ -88,16 +88,16 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     margin: "auto",
-    marginBottom: "20px",
+    marginBottom: "5px",
 
 
   },
   textcadface: {
     color: "black",
     fontFamily: "Open Sans",
-    margin:"auto",
+    margin: "auto",
     fontSize: "12px",
-    marginLeft:"2px",
+    marginLeft: "2px",
 
   },
 
@@ -148,16 +148,22 @@ export const styles = StyleSheet.create({
     borderRadius: '35px',
   },
   containerlogin: {
+    display: "flex",
+    flexDirection: "row",
     alignItems: "center",
-    marginBottom: 24,
     paddingHorizontal: 26,
     flex: 1,
     backgroundColor: "#FFF2D8",
     justifyContent: "center",
     fontFamily: "Open Sans",
   },
-  buttoncontinuar1:{ 
-       marginTop:"10px",
+  buttoncontinuar1: {
+    marginTop: "7px",
+    backgroundColor: "#F6EB60",
+    borderRadius: "10px",
+    width: "140px",
+    margin: "auto",
+    
   },
   buttoncadgoogle1: {
     backgroundColor: "transparent",
@@ -169,7 +175,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     margin: "auto",
-    marginTop:"5px",
+    marginTop: "5px",
   },
   buttoncadface1: {
     backgroundColor: "transparent",
@@ -181,15 +187,15 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     margin: "auto",
-    marginBottom:"5px",
-    marginTop:"5px",
+    marginBottom: "5px",
+    marginTop: "5px",
   },
-  imagetextgoogle:{
-    display:"flex", 
+  imagetextgoogle: {
+    display: "flex",
     flexDirection: "row",
   },
-  imagetextface:{
-    display:"flex", 
+  imagetextface: {
+    display: "flex",
     flexDirection: "row",
   },
   //CKeditor
@@ -205,13 +211,15 @@ export const styles = StyleSheet.create({
   paragraphper: {
     fontWeight: "bolder",
     marginRight: "10px",
-    marginLeft:"10px",
-    display:"flex",
+    marginLeft: "10px",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
   },
-  containernomeper:{
-     marginTop:"15px",
-     marginBottom:"10px",
-     display:"flex",
+  containernomeper: {
+    marginTop: "15px",
+    marginBottom: "10px",
+    display: "flex",
   },
   inputper: {
     backgroundColor: "white",
@@ -223,94 +231,105 @@ export const styles = StyleSheet.create({
   buttonper: {
     backgroundColor: "#E9DAF7",
     height: "35px",
-    width: "67px",
+    width: "91px",
     borderRadius: "0px",
     border: "1px solid #D9D9D9",
     color: "black",
     justifyContent: "center",
-    
+
   },
- containersalvarper:{
-   display:"flex",
-   flexDirection: "row",
+  containersalvarper: {
+    display: "flex",
+    flexDirection: "row",
     justifyContent: "flex-end",
-    marginTop:"20px",
- },
- linhafinal:{
-  height: "7",
-   width: "100%",
- }, 
- iconinfo:{
-  fontSize:"24px",
-  marginLeft:"auto",
- },
- //Modal
- enteredView: {
-  flex: 1,
-  justifyContent: 'center',
-  alignItems: 'center',
-  marginTop: 22,
-},
-modalView: {
-  margin: 20,
-  backgroundColor: 'white',
-  borderRadius: 20,
-  padding: 15,
-  alignItems: 'center',
-  shadowColor: '#000',
-  shadowOffset: {
+    marginTop: "20px",
+  },
+  linhafinal: {
+    height: "7",
+    width: "100%",
+  },
+  iconinfo: {
+    fontSize: "24px",
+    marginLeft: "auto",
+  },
+  //Modal
+  enteredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 22,
+  },
+  modalView: {
+    margin: "auto",
+    backgroundColor: 'white',
+    borderRadius: 20,
+    padding: 15,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
       width: 0,
       height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
   },
-  shadowOpacity: 0.25,
-  shadowRadius: 4,
-  elevation: 5,
-},
-buttonclose:{
-  fontSize:"24px",
-  marginLeft:"auto",
-},
+  buttonclose: {
+    fontSize: "24px",
+    marginLeft: "auto",
+  },
 
-textStyle: {
-  color: 'black',
-  fontWeight: 'bold',
-  textAlign: 'center',
-},
-modalText: {
+  textStyle: {
+    color: 'black',
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  modalText: {
 
-  textAlign: 'start',
-},
-modalText2: {
-  marginRight: "auto",
-},
-modalText3: {
-  marginTop: "10px",
-  marginBottom: "10px",
-  fontWeight: "bold"
-},
-modalText4: {
-  marginRight: "auto",
-  marginBottom: "10px",
-  marginTop: "10px",
-},
-modalText5: {
-  marginBottom: "10px",
-  fontWeight: "bold",
-},
-modalText6: {
-  fontWeight: "bold",
-},
-iconinfo: {
-  fontSize: "24px",
-  marginLeft:"auto",
-  marginTop:"15px",
-},
- containermodal:{
- display:"flex",
- flexDirection:"row",
-},
+    textAlign: 'start',
+  },
+  modalText2: {
+    marginRight: "auto",
+  },
+  modalText3: {
+    marginTop: "10px",
+    marginBottom: "10px",
+    fontWeight: "bold"
+  },
+  modalText4: {
+    marginRight: "auto",
+    marginBottom: "10px",
+    marginTop: "10px",
+  },
+  modalText5: {
+    marginBottom: "10px",
+    fontWeight: "bold",
+  },
+  modalText6: {
+    fontWeight: "bold",
+  },
+  iconinfo: {
+    fontSize: "24px",
+    marginLeft: "auto",
+    marginTop: "15px",
+  },
+  containermodal: {
+    display: "flex",
+    flexDirection: "row",
+  },
 });
 
 
 
 
+export const colors =
+  ["rgba(190,228,228,1)",
+    "rgba(190,228,228,1)",
+    "rgba(242,204,201,1)",
+    "rgba(242,204,201,1)",
+    "rgba(235,222,240,1)",
+    "rgba(235,222,240,1)",
+    "rgba(239,196,167,1)",
+    "rgba(239,196,167,1)", "rgba(239,196,167,1)", "rgba(190,228,228,1)", "rgba(190,228,228,1)", "rgba(242,204,201,1)", "rgba(242,204,201,1)", "rgba(235,222,240,1)", "rgba(235,222,240,1)", "rgba(239,196,167,1)", "rgba(239,196,167,1)", "rgba(190,228,228,1)", "rgba(190,228,228,1)", "rgba(242,204,201,1)", "rgba(242,204,201,1)",];
+
+export const locations = [0, 0.1, 0.1, 0.2, 0.2, 0.3, 0.3, 0.3, 0.4, 0.4, 0.5, 0.5, 0.6, 0.6, 0.7, 0.7, 0.8, 0.8, 0.9, 0.9, 1, 1,];
