@@ -1,15 +1,15 @@
 import { LinearGradient } from "expo-linear-gradient";
-import { Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
 import { Appbar, Button, Paragraph } from "react-native-paper";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { styles } from "../config/styles";
+import { colors, locations, styles } from "../config/styles";
 
 export default function CapitulosScreen(){
     const _goBack = () => console.log("Went back");
     const _handleMore = () => console.log("Shown more");
 
 return(
-    <SafeAreaProvider>
+    <SafeAreaProvider style={styles.containercriacaoper}>
          <Appbar.Header style={styles.navConfig}>
             <Appbar.BackAction onPress={_goBack} />
             <Appbar.Content titleStyle={{ textAlign: "center", fontWeight: "bold", fontSize:"20px" }} title="Alice na Favela" />
@@ -25,14 +25,20 @@ return(
           style={{ height: 7, width: "100%" }}
         />
         </View>
+        <View>
         <Paragraph style={styles.capitulosparagraph}>Capítulos</Paragraph>
-        <Button><Text style={{fontStyle:"italic", height:"5px", width:"5px"}}></Text><Text>Capítulo1</Text></Button>
-        <Button><Text style={{fontStyle:"italic", height:"5px", width:"5px"}}></Text><Text>Capítulo2</Text></Button>
-        <Button><Text style={{fontStyle:"italic", height:"5px", width:"5px"}}></Text><Text>Capítulo3</Text></Button>
-        <Button><Text style={{fontStyle:"italic", height:"5px", width:"5px"}}></Text><Text>Capítulo4</Text></Button>
-        <Button><Text style={{fontStyle:"italic", height:"5px", width:"5px"}}></Text><Text>Capítulo5</Text></Button>
+
+        <Button style={styles.buttoncapitulos}><View><Text style={styles.capitulosub}>Capítulo:</Text><Text style={styles.capitulostext}>Capítulo1</Text> 
+      </View><View> <Image style={{width:"15px", height:"15px", marginLeft:"160px"}}
+        source={{ uri: require("/assets/images/lixeira.png") }}/></View>  </Button>
+
+        <Button style={styles.buttoncapitulos}><View><Text style={styles.capitulosub}>Capítulo:</Text><Text style={styles.capitulostext}>Capítulo2</Text></View></Button>
+        <Button style={styles.buttoncapitulos}><View><Text style={styles.capitulosub}>Capítulo:</Text><Text style={styles.capitulostext}>Capítulo3</Text></View></Button>
+        <Button style={styles.buttoncapitulos}><View><Text style={styles.capitulosub}>Capítulo:</Text><Text style={styles.capitulostext}>Capítulo4</Text></View></Button>
+        <Button style={styles.buttoncapitulos}><View><Text style={styles.capitulosub}>Capítulo:</Text><Text style={styles.capitulostext}>Capítulo5</Text></View></Button>
         <View>
           <Button>Adicionar novo capítulo</Button>
+        </View>
         </View>
         
     </SafeAreaProvider>

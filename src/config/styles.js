@@ -5,7 +5,7 @@ import { shouldUseActivityState } from "react-native-screens";
 export const styles = StyleSheet.create({
   container: {
     alignItems: "center",
-    width:"380px",
+    width: "380px",
     paddingHorizontal: 26,
     flex: 1,
     backgroundColor: "#FFF2D8",
@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
     paddingLeft: '40px',
     paddingTop: '40px',
     borderRadius: '35px',
-    
+
   },
   imagedocks: {
     width: '80px',
@@ -163,7 +163,7 @@ export const styles = StyleSheet.create({
     borderRadius: "10px",
     width: "140px",
     margin: "auto",
-    
+
   },
   buttoncadgoogle1: {
     backgroundColor: "transparent",
@@ -317,6 +317,36 @@ export const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
   },
+  //CapitulosScreen
+  capitulosparagraph: {
+    fontWeight: "bolder",
+    fontSize: "25px",
+    marginTop: "15px",
+    marginLeft: "30px",
+  },
+  buttoncapitulos: {
+    border: "3px solid #F1C4A5",
+    borderRadius: "0px",
+    height: "40px",
+    width: "260px",
+    marginTop: "13px",
+    marginLeft: "32px",
+    display: "flex",
+    flexDirection: "row",
+    alignItems:"center"
+  },
+  capitulostext: {
+    color:"black",
+    marginTop: "7px",
+  },
+  capitulosub:{
+    height:"3px", 
+    width:"3px", 
+    color:"black",
+    marginBottom:"2px",
+    fontSize: "12px",
+  }
+ 
 });
 
 

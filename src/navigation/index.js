@@ -2,7 +2,8 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import { createStackNavigator } from "@react-navigation/stack";
 import { CadScreen } from "../screens/CadScreen";
 import CapitulosCKScreen from "../screens/CapitulosCKScreen";
-import Capitulos from "../screens/CapitulosScreen";
+import CapitulosScreen from "../screens/CapitulosScreen";
+
 import CKeditor from "../screens/Ckeditor";
 import CriacaoMundos from "../screens/CriacaoMundosScreen";
 import { ForgotPasswordScreen } from "../screens/ForgotPasswordScreen";
@@ -16,7 +17,15 @@ export const RootNavigation = () => {
     return (
 
         <Stack.Navigator>
-            <Stack.Screen
+              <Stack.Screen
+                name="CapitulosScreen"
+                component={CapitulosScreen}
+                options={{
+                    headerShown: false,
+                    title: "Tela de Capítulos",
+                }}
+            />
+              <Stack.Screen
                 name="LoginScreen"
                 component={LoginScreen}
                 options={{
@@ -24,6 +33,7 @@ export const RootNavigation = () => {
                     title: "Tela de Login",
                 }}
             />
+          
            <Stack.Screen
                 name="CKeditor"
                 component={CKeditor}
@@ -57,14 +67,7 @@ export const RootNavigation = () => {
                     title: "Tela de Capítulos",
                 }}
             />
-              <Stack.Screen
-                name="Capitulos"
-                component={Capitulos}
-                options={{
-                    headerShown: false,
-                    title: "Tela de Capítulos",
-                }}
-            />
+             
              
          
            
