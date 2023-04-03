@@ -327,7 +327,7 @@ export const styles = StyleSheet.create({
   buttoncapitulos: {
     border: "3px solid #F1C4A5",
     borderRadius: "0px",
-    height: "40px",
+    height: "50px",
     width: "260px",
     marginTop: "13px",
     marginLeft: "32px",
@@ -337,7 +337,7 @@ export const styles = StyleSheet.create({
   },
   capitulostext: {
     color:"black",
-    marginTop: "7px",
+    marginTop: "12px",
   },
   capitulosub:{
     height:"3px", 
@@ -345,8 +345,48 @@ export const styles = StyleSheet.create({
     color:"black",
     marginBottom:"2px",
     fontSize: "12px",
+  },
+  viewcapitulos:{
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center"
+  },
+  imagelixeira:{
+    width:"15px", 
+    height:"15px", 
+    marginLeft:"160px"
+  }, 
+  buttonadicionar:{
+    border: "3px solid #F1C4A5",
+    borderRadius: "0px",
+    height: "50px",
+    width: "260px",
+  },
+  buttonadicionar:{
+    border: "3px solid #F1C4A5",
+    borderRadius: "0px",
+    height: "50px",
+    width: "200px",
+    marginLeft: "32px",
+    display: "flex",
+    marginTop:10,
+    flexDirection: "row",
+    alignItems:"center", 
+    justifyContent:"center",
+    backgroundColor:"#FFA974",
+  },
+  textadicionar:{
+    color:"black",
+  },
+  iconplus:{
+    fontSize:"30px",
+    color:"black"
+  },
+  containerplustext:{
+    display:"flex",
+    flexDirection:"row",
+    alignItems:"center"
   }
- 
 });
 
 
