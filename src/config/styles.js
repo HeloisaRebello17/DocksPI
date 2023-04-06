@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import { shouldUseActivityState } from "react-native-screens";
+import { ITEM_HEIGHT, ITEM_WIDTH } from "../screens/CarouselCardItem";
 
 
 export const styles = StyleSheet.create({
@@ -365,7 +366,7 @@ export const styles = StyleSheet.create({
   buttonadicionar:{
     border: "3px solid #F1C4A5",
     borderRadius: "0px",
-    height: "50px",
+    height: "40px",
     width: "200px",
     marginLeft: "32px",
     display: "flex",
@@ -386,7 +387,33 @@ export const styles = StyleSheet.create({
     display:"flex",
     flexDirection:"row",
     alignItems:"center"
-  }
+  },
+  container: {
+
+    backgroundColor: 'white',
+    borderRadius: 10,
+    width: ITEM_WIDTH,
+    height: ITEM_HEIGHT,
+    paddingBottom: 40,
+
+},
+
+header: {
+    color: "#222",
+    backgroundColor: "#2250",
+    fontSize: 14,
+    fontWeight: "bold",
+    paddingLeft: 20,
+    paddingTop: 20
+
+},
+body: {
+    color: "#222",
+    fontSize: 14,
+    paddingLeft: 20,
+    paddingLeft: 20,
+    paddingRight: 20
+}
 });
 
 

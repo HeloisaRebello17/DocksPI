@@ -3,6 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { CadScreen } from "../screens/CadScreen";
 import CapitulosCKScreen from "../screens/CapitulosCKScreen";
 import CapitulosScreen from "../screens/CapitulosScreen";
+import CarouselCards from "../screens/CarouselCard";
 
 import CKeditor from "../screens/Ckeditor";
 import CriacaoMundos from "../screens/CriacaoMundosScreen";
@@ -17,12 +18,13 @@ export const RootNavigation = () => {
     return (
 
         <Stack.Navigator>
+            
               <Stack.Screen
-                name="CapitulosScreen"
-                component={CapitulosScreen}
+                name="LoginScreen"
+                component={CarouselCards}
                 options={{
                     headerShown: false,
-                    title: "Tela de Capítulos",
+                    title: "Tela de Cards",
                 }}
             />
               <Stack.Screen
@@ -48,6 +50,14 @@ export const RootNavigation = () => {
                 options={{
                     headerShown: false,
                     title: "Tela de Mundos",
+                }}
+            />
+              <Stack.Screen
+                name="CapitulosScreen"
+                component={CapitulosScreen}
+                options={{
+                    headerShown: false,
+                    title: "Tela de Capítulos",
                 }}
             />
               <Stack.Screen
