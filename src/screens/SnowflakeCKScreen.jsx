@@ -9,11 +9,6 @@ import { LinearGradient } from "expo-linear-gradient";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { TouchableOpacity } from "react-native-web";
 
-
-
-
-
-
 export default function SnowflakeCK() {
  
   const [modalVisible, setModalVisible] = useState(false);

@@ -1,7 +1,5 @@
 import { StyleSheet } from "react-native";
 import { shouldUseActivityState } from "react-native-screens";
-import { ITEM_HEIGHT, ITEM_WIDTH } from "../screens/CarouselCardItem";
-
 
 export const styles = StyleSheet.create({
   container: {
@@ -388,15 +386,6 @@ export const styles = StyleSheet.create({
     flexDirection:"row",
     alignItems:"center"
   },
-  container: {
-
-    backgroundColor: 'white',
-    borderRadius: 10,
-    width: ITEM_WIDTH,
-    height: ITEM_HEIGHT,
-    paddingBottom: 40,
-
-},
 
 header: {
     color: "#222",

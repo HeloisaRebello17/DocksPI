@@ -78,9 +78,6 @@ export const RootNavigation = () => {
                 }}
             />
              
-             
-         
-           
             <Stack.Screen
                 name="ForgotPasswordScreen"
                 component={ForgotPasswordScreen}
