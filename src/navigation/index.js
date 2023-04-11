@@ -20,7 +20,7 @@ export const RootNavigation = () => {
         <Stack.Navigator>
             
               <Stack.Screen
-                name="LoginScreen"
+                name="LoginScreen2"
                 component={CarouselCards}
                 options={{
                     headerShown: false,

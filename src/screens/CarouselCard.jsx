@@ -19,7 +19,20 @@ const CarouselCardItem = ({ item, index }) => {
 const CarouselCards = () => {
   const [index, setIndex] = React.useState(0)
   const isCarousel = React.useRef(null)
-
+  const dataCard = [
+    {
+      title: "Método Snowflake",
+      body: "Ut tincidunt tincidunt erat. Sed cursus turpis vitae tortor. Quisque malesuada placerat nisl. Donec quam felis.",
+    },
+    {
+      title: "In turpis",
+      body: "Aenean ut eros et nisl sagittis vestibulum. Donec posuere vulputate arcu.",
+    },
+    {
+      title: "Lorem Ipsum",
+      body: "Phasellus ullamcorper ipsum rutrum nunc. Nullam quis ante. Etiam ultricies nisi vel augue.",
+    }
+  ]
   return (
     <View>
       <Carousel
@@ -35,7 +48,7 @@ const CarouselCards = () => {
         useScrollView={true}
       />
 
-      <Pagination
+      { <Pagination
         activeDotIndex={index}
         carouselRef={isCarousel}
         dotStyle={{
@@ -48,7 +61,7 @@ const CarouselCards = () => {
         inactiveDotOpacity={0}
         inactiveDotScale={0.6}
         tappableDots={true}
-      />
+      /> }
     </View>
   )
 }
@@ -78,19 +91,6 @@ const styles = StyleSheet.create({
   }
 })
 
-export const dataCard = [
-  {
-    title: "Aenean leo",
-    body: "Ut tincidunt tincidunt erat. Sed cursus turpis vitae tortor. Quisque malesuada placerat nisl. Donec quam felis.",
-  },
-  {
-    title: "In turpis",
-    body: "Aenean ut eros et nisl sagittis vestibulum. Donec posuere vulputate arcu.",
-  },
-  {
-    title: "Lorem Ipsum",
-    body: "Phasellus ullamcorper ipsum rutrum nunc. Nullam quis ante. Etiam ultricies nisi vel augue.",
-  }
-]
+
 
 export default CarouselCards
