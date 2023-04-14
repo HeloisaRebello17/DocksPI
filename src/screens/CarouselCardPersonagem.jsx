@@ -13,11 +13,12 @@ const ITEM_HEIGHT = Math.round(SLIDER_HEIGHT * 0.29)
 
 const CarouselCardItem = ({ item, index }) => {
     const isFirstItem = index === 0;
-    const headerStyle = isFirstItem ? styles.headerFirst : styles.header;
-    const containerStyle = isFirstItem ? styles.containerFirst : styles.container;
-    const bodyStyle = isFirstItem ? styles.bodyFirst : styles.body;
-    const imageStyle = isFirstItem ? styles.imageFirst : styles.image;
-
+    const isLastItem = index === dataCard.length - 1;
+    const headerStyle = isFirstItem ? styles.headerFirst : (isLastItem ? styles.headerLast : styles.header);
+    const containerStyle = isFirstItem ? styles.containerFirst : (isLastItem ? styles.containerLast : styles.container);
+    const bodyStyle = isFirstItem ? styles.bodyFirst : (isLastItem ? styles.bodyLast : styles.body);
+    const imageStyle = isFirstItem ? styles.imageFirst : (isLastItem ? styles.imageLast : styles.image);
+  
 
 
 
@@ -51,6 +52,7 @@ export const CarouselCards3 = () => {
                 sliderWidth={SLIDER_WIDTH}
                 sliderHeight={SLIDER_HEIGHT}
                 itemWidth={ITEM_WIDTH}
+                
                 onSnapToItem={(index) => setIndex(index)}
                 useScrollView={true}
             />
@@ -90,7 +92,6 @@ const styles = StyleSheet.create({
         paddingBottom: 0,
       
     },
-
     containerFirst: {
         backgroundColor: '#EBDEF0', // change the color of the first card here
         borderRadius: 10,
@@ -98,6 +99,15 @@ const styles = StyleSheet.create({
         height: ITEM_HEIGHT,
         paddingBottom: 40,
     },
+    containerLast: {
+        backgroundColor: '#FFF2D8',
+        border:"5px solid #EBDEF0", // change the color of the first card here
+        borderRadius: 10,
+        width: "40px",
+        height: "40px",
+        marginTop:"25%"
+    
+      },
     header: {
         color: "#222",
         backgroundColor: "#2250",
@@ -153,7 +163,13 @@ const styles = StyleSheet.create({
         display: "flex",
         position: "fixed",
         marginTop: "30px",
-    }
+    },
+    imageLast: {
+        width: "20px",
+        height: "20px",
+        marginLeft:"5px",
+        marginTop:"5px"
+      },
 })
 
 
@@ -169,6 +185,11 @@ export const dataCard = [
     {
        
         body: "Alyssa",
+
+    },
+    {
+       
+        image: require("/assets/images/mais.png"),
 
     },
    

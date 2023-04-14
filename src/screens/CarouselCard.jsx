@@ -15,17 +15,19 @@ const ITEM_HEIGHT = Math.round(SLIDER_HEIGHT * 0.29)
 
 const CarouselCardItem = ({ item, index }) => {
   const isFirstItem = index === 0;
-  const headerStyle = isFirstItem ? styles.headerFirst : styles.header;
-  const containerStyle = isFirstItem ? styles.containerFirst : styles.container;
-  const bodyStyle = isFirstItem ? styles.bodyFirst : styles.body;
-  const imageStyle = isFirstItem ? styles.imageFirst : styles.image;
-  
+  const isLastItem = index === dataCard.length - 1;
+  const headerStyle = isFirstItem ? styles.headerFirst : (isLastItem ? styles.headerLast : styles.header);
+  const containerStyle = isFirstItem ? styles.containerFirst : (isLastItem ? styles.containerLast : styles.container);
+  const bodyStyle = isFirstItem ? styles.bodyFirst : (isLastItem ? styles.bodyLast : styles.body);
+  const imageStyle = isFirstItem ? styles.imageFirst : (isLastItem ? styles.imageLast : styles.image);
+
+
   return (
     <View>
       <View style={containerStyle} key={index}>
         <Text style={headerStyle}>{item.title}</Text>
         <Text style={bodyStyle}>{item.body}</Text>
-        <Image style={imageStyle}source={item.image}/>
+        <Image style={imageStyle} source={item.image} />
 
       </View>
     </View>
@@ -74,27 +76,27 @@ const CarouselCards = () => {
               source={{ uri: require("/assets/images/rightChevron2.png") }} />
           </View>
         </Button>
-      <View style={styles.viewcarousel}>
-        <View style={styles.viewcarouselcard}>
-          <Carousel
-            layout="default"
-            layoutCardOffset={9}
-            ref={isCarousel}
-            data={dataCard}
-            renderItem={CarouselCardItem}
-            sliderWidth={SLIDER_WIDTH}
-            sliderHeight={SLIDER_HEIGHT}
-            itemWidth={ITEM_WIDTH}
-            onSnapToItem={(index) => setIndex(index)}
-            useScrollView={true}
-          > <Button>Hello</Button></Carousel>
+        <View style={styles.viewcarousel}>
+          <View style={styles.viewcarouselcard}>
+            <Carousel
+              layout="default"
+              layoutCardOffset={9}
+              ref={isCarousel}
+              data={dataCard}
+              renderItem={CarouselCardItem}
+              sliderWidth={SLIDER_WIDTH}
+              sliderHeight={SLIDER_HEIGHT}
+              itemWidth={ITEM_WIDTH}
+              onSnapToItem={(index) => setIndex(index)}
+              useScrollView={true}
+            > <Button>Hello</Button></Carousel>
           </View>
           <View style={styles.viewcardper}>
-          <CarouselCards2/>
+            <CarouselCards2 />
           </View>
-          <CarouselCards3/>
-          </View>
-        
+          <CarouselCards3 />
+        </View>
+
 
         {<Pagination
           activeDotIndex={index}
@@ -105,18 +107,20 @@ const CarouselCards = () => {
             borderRadius: 0,
             marginHorizontal: 0,
             backgroundColor: 'rgba(0, 0, 0, 0.92)',
-            
+
           }}
-          useRef={{paddingLeft: "18.5px",
-            paddingRight: "158.5px"}}
+          useRef={{
+            paddingLeft: "18.5px",
+            paddingRight: "158.5px"
+          }}
           inactiveDotOpacity={0}
           inactiveDotScale={0.6}
           tappableDots={true}
-    
+
         />}
-         
+
       </View>
-     
+
     </SafeAreaProvider>
   )
 }
@@ -128,8 +132,9 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     width: ITEM_WIDTH,
     height: ITEM_HEIGHT,
-    paddingBottom: 0, 
-},
+    paddingBottom: 0,
+  },
+ 
   header: {
     color: "#222",
     backgroundColor: "#2250",
@@ -147,18 +152,18 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     paddingLeft: 20,
     paddingRight: 20,
-    marginTop:"15px",
+    marginTop: "15px",
     textAlign: "center",
 
   },
-  body:{
+  body: {
     color: "black",
     fontSize: 13,
     fontWeight: "bolder",
     paddingLeft: 15,
     paddingLeft: 20,
     paddingRight: 15,
-    marginTop:"12%",
+    marginTop: "12%",
   },
   textwrite: {
     color: "black",
@@ -225,19 +230,21 @@ const styles = StyleSheet.create({
     width: 10,
     height: 10
   },
-  imageFirst:{
+ 
+  imageFirst: {
     width: 50,
     height: 50,
-    display:"flex",
+    display: "flex",
     position: "fixed",
     marginTop: "30px",
   },
+ 
 
-  viewcarouselcard:{
-    marginBottom:"30px"
+  viewcarouselcard: {
+    marginBottom: "30px"
   },
-  viewcardper:{
-    marginBottom:"30px"
+  viewcardper: {
+    marginBottom: "30px"
   }
 
 })
@@ -256,6 +263,11 @@ export const dataCard = [
   {
 
     body: "2. Transforme a frase em um parágrafo"
+
+  },
+  {
+
+    image: require("/assets/images/mais.png")
 
   },
 
