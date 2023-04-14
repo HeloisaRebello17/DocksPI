@@ -252,7 +252,7 @@ export const styles = StyleSheet.create({
     marginLeft: "auto",
   },
   //Modal
-  enteredView: {
+  centeredView: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',

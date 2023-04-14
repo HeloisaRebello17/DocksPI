@@ -4,6 +4,8 @@ import { CadScreen } from "../screens/CadScreen";
 import CapitulosCKScreen from "../screens/CapitulosCKScreen";
 import CapitulosScreen from "../screens/CapitulosScreen";
 import CarouselCards from "../screens/CarouselCard";
+import { CarouselCards2 } from "../screens/CarouselCardJornada";
+import { CarouselCards3 } from "../screens/CarouselCardPersonagem";
 
 import CKeditor from "../screens/Ckeditor";
 import CriacaoMundos from "../screens/CriacaoMundosScreen";
@@ -18,7 +20,7 @@ export const RootNavigation = () => {
     return (
 
         <Stack.Navigator>
-            
+           
               <Stack.Screen
                 name="LoginScreen2"
                 component={CarouselCards}
@@ -27,6 +29,24 @@ export const RootNavigation = () => {
                     title: "Tela de Cards",
                 }}
             />
+               <Stack.Screen
+                name="CardsPersonagem"
+                component={CarouselCards3}
+                options={{
+                    headerShown: false,
+                    title: "Tela de Cards",
+                }}
+            />
+              <Stack.Screen
+                name="LoginScreen3"
+                component={CarouselCards2 }
+                options={{
+                    headerShown: false,
+                    title: "Tela de Cards",
+                }}
+            />
+            
+              
               <Stack.Screen
                 name="LoginScreen"
                 component={LoginScreen}
